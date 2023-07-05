@@ -5,10 +5,15 @@
     <title></title>
 </head>
 <body>
-    <form>
+    <form method="post">
         {{ form.hidden_tag() }}
         {{ form.text }}
         {{ form.submit }}
     </form>
+
+    {% if answer %}
+        {{ answer }}
+    {% endif %}
+
 </body>
 </html>
