@@ -4,5 +4,5 @@ from wtforms.validators import DataRequired
 
 
 class UniqueCharacterForm(FlaskForm):
-    text = TextAreaField('Введіть текст', validators=[DataRequired()])
+    text = TextAreaField('Введіть текст:', validators=[DataRequired()])
     submit = SubmitField('Надіслати')
