@@ -1,6 +1,6 @@
 def unique_character(text):
     for char in text:
-        if char in '.@\'\`/,:$;-!#№%*&?)({}][|':
+        if char in '.@\'\`/,:$;-!#№%*&?)({}][|1234567890':
             text = text.replace(char, '')
 
     splitted = text.split()
@@ -17,4 +17,4 @@ def unique_character(text):
         final = done.count(element)
         if final == 1:
             return element
-    return
+    return 'У тексті немає унікальних літер!'
