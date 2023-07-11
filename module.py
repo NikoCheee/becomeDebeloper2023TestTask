@@ -1,4 +1,8 @@
-def unique_character(text):
+def unique_character(text: str):
+    if text.isspace():
+        return "Не можна вводити тільки пробіли!"
+    if text == '':
+        return "Не можна вводити пустий текст!"
     for char in text:
         if char in '.@\'\`/,:$;-!#№%*&?)({}][|1234567890':
             text = text.replace(char, '')
