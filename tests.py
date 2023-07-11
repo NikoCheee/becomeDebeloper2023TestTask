@@ -24,7 +24,7 @@ But do not program in COBOL if you can avoid it.
         self.assertEqual(unique, "У тексті немає унікальних літер!")
 
     def test_blanc(self):
-        unique = unique_character("")
+        unique = unique_character("     ")
         self.assertEqual(unique, "Не можна вводити тільки пробіли!")
 
 
