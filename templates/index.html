@@ -1,19 +1,32 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="/static/style.css" >
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
     <title></title>
 </head>
 <body>
-    <form method="post">
-        {{ form.hidden_tag() }}
-        {{ form.text }}
-        {{ form.submit }}
-    </form>
+    <div>
+        <h1>Тестове завдання Become A Developer 2023</h1>
+        <h4>Програма приймає на вхід довільний текст і знаходить в кожному слові цього тексту
+            найперший символ, який більше НЕ повторюється в аналізуємому слові.
+            Після цього із отриманого набору символів програма обирає перший унікальний
+            (тобто той, який більше не зустрічається в наборі) і повертає його.</h4>
+            <form method="post">
+                {{ form.hidden_tag() }}
+                <p class="bold">{{ form.text.label }}</p>
+                <p>{{ form.text(rows=14, cols=50) }}</p>
+                <p>{{ form.submit(class_='submit') }}</p>
+            </form>
 
-    {% if answer %}
-        {{ answer }}
-    {% endif %}
-
+            {% if answer %}
+                <p class="bold">Ваша відповідь:</p>
+                <p>{{ answer }}</p>
+            {% endif %}
+    </div>
 </body>
 </html>
