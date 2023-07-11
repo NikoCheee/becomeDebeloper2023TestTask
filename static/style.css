@@ -6,9 +6,9 @@ html, body {
 }
 
 div {
-    width: 800px;
+    width: 60%;
     height: 600px;
-    margin: 100px auto;
+    margin: 75px auto;
     padding: 10px 40px;
     text-align: center;
     background: #1e6254;
@@ -23,8 +23,10 @@ h4 {
 }
 
 textarea {
+    width: 60%;
     border: 1px solid black;
     border-radius: 4px;
+    resize: none;
 }
 
 .bold {
@@ -40,4 +42,25 @@ textarea {
 
 .submit:hover {
     background-color: #cdc8c8;
+}
+
+@media (max-width: 800px) {
+    h1 {
+        font-size: 22px;
+    }
+    h4 {
+        font-size: 16px;
+    }
+    p {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 550px) {
+    h1 {
+        font-size: 20px;
+    }
+    h4 {
+        font-size: 14px;
+    }
 }
