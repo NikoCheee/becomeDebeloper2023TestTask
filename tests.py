@@ -27,6 +27,10 @@ But do not program in COBOL if you can avoid it.
         unique = unique_character("     ")
         self.assertEqual(unique, "Не можна вводити тільки пробіли!")
 
+    def test_empty_text(self):
+        unique = unique_character("")
+        self.assertEqual(unique, "Не можна вводити пустий текст!")
+
 
 if __name__ == '__main__':
     unittest.main()
