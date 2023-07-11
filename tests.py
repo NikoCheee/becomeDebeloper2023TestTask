@@ -23,7 +23,7 @@ But do not program in COBOL if you can avoid it.
         unique = unique_character("'sdssdd sffs00 92 984jfjf llss@@@' ;@ 'ss ;d;d ;s;s aa asddsa qwqw dd || | ")
         self.assertEqual(unique, "У тексті немає унікальних літер!")
 
-    def test_blanc(self):
+    def test_whitespaces_only(self):
         unique = unique_character("     ")
         self.assertEqual(unique, "Не можна вводити тільки пробіли!")
 
